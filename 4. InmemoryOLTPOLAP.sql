@@ -1,0 +1,3 @@
+[dbo].[OLAPWORKLOADInmemory]
+
+[dbo].[OLTPWorkloadInMemory]
