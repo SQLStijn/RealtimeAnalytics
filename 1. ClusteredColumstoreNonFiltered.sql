@@ -1,0 +1,14 @@
+--- OLAP & OLTP  Scenario 1
+DROP INDEX IF EXISTS CI_TEST ON SSD.Orders
+GO
+DROP INDEX IF EXISTS ColumnstoreIndex ON SSD.Orders
+GO
+CREATE CLUSTERED COLUMNSTORE INDEX ColumnStoreIndex ON SSD.Orders
+
+GO
+
+
+--- OPEN FOLLOWING WORKLOAD IN SQL QUERY STRESS 100 Iterations & 2 Threads
+
+EXEC dbo.OLAPWorkload
+EXEC dbo.OLTPWorkload
